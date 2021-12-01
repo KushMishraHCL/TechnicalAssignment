@@ -1,0 +1,15 @@
+﻿<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script src="vue.min.js"></script>
+    <script src="EventBus.mjs" type="module" charset="utf-8"></script>
+    <script src="main.mjs" type="module" charset="utf-8"></script>
+</head>
+    <body>
+        <div id="app">
+            <button v-on:click="sendTestEvent">Send 'frontend_test' to backend</button>
+            <p>Events from Backend: </p>
+            <p v-for="evt in events">{{JSON.stringify(evt)}}</p>
+        </div>
+    </body>
+</html> 
